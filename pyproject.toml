@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nebulus-core"
-version = "0.1.0"
+version = "0.2.1"
 description = "Shared core library for the Nebulus AI ecosystem"
 readme = "README.md"
 authors = [{name = "JL West Sr", email = "labs@example.com"}]
@@ -49,6 +49,11 @@ nebulus = "nebulus_core.cli.main:cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"nebulus_core.intelligence.templates.dealership" = ["config.yaml"]
+"nebulus_core.intelligence.templates.legal" = ["config.yaml"]
+"nebulus_core.intelligence.templates.medical" = ["config.yaml"]
 
 [tool.black]
 line-length = 88
